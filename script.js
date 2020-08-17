@@ -66,6 +66,7 @@ const parentElement = document.querySelector('.todo-container');
 const paragraph = document.querySelector('p');
 // console.log(paragraph);
 
+// remove the paragraph
 parentElement.removeChild(paragraph);
 
 // create a new list item;
@@ -89,11 +90,13 @@ function addTodo() {
     const input = document.querySelector('input');
     // console.log(input.value);
     newTodo.innerText = input.value;
+    // add the event listener
     newTodo.onclick = toggleTodo;
     // console.log(newTodo);
     // then get the todo-list and append the list item as a child
     const parent = document.getElementById('todo-list');
     parent.appendChild(newTodo);
+    // reset the input value
     input.value = '';
 }
 
